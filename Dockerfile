@@ -16,4 +16,6 @@ RUN export uid=1000 gid=1000 && \
     chown ${uid}:${gid} -R /opt/jmeter &&\
     chown ${uid}:${gid} -R /home/jmeter
 
+USER jmeter
+
 ENTRYPOINT ["/opt/jmeter/bin/jmeter.sh"]
